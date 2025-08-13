@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Typography tweaks to match site feel */
+.prose {
+  @apply max-w-3xl prose-lg md:prose-xl leading-relaxed;
+}
+
+.heading-anchor {
+  @apply no-underline;
+}
+
+/* Pink accents */
+.prose a {
+  @apply underline decoration-pink-500/60 underline-offset-4 hover:text-pink-400;
+}
+
+/* Heading rhythm */
+.prose h1, .prose h2, .prose h3 {
+  @apply tracking-tight font-semibold;
+}
+.prose h2 { @apply mt-12 mb-4 text-2xl md:text-3xl; }
+.prose p { @apply my-6; }
+
+.accent-pink {
+  @apply text-pink-400;
+}
+
+/* Make all clickable anchors hover pink */
+a {
+  @apply transition-colors hover:text-pink-400;
+}
+
+/* Don't underline auto-linked headings (TOC anchors) */
+.prose .heading-anchor {
+  @apply no-underline hover:no-underline text-inherit hover:text-inherit;
+}
+
+/* Site background (solid #1A1A1A) */
+:root { --bg-site: #1A1A1A; }
+.bg-site { background-color: var(--bg-site); }
+
+/* Global fonts */
+html body { font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
+.prose h1, .prose h2, .prose h3, h1, h2, h3 { font-family: "Source Serif 4", serif; }
+
+/* Article typographic polish */
+:root { --text-muted: #B3BBC6; }
+body {
+  font-size: clamp(18px, 1.6vw, 20px);
+  line-height: 1.7;
+  color: #E6E6E6;
+  font-kerning: normal;
+  font-variant-ligatures: common-ligatures;
+  font-variant-numeric: oldstyle-nums tabular-nums;
+  hyphens: auto;
+  text-wrap: pretty;
+  word-break: normal;
+  color-scheme: dark;
+}
+.text-muted { color: var(--text-muted); }
+
+.article-prose { max-width: 70ch; }
+.article-prose p { text-align: left; widows: 2; orphans: 2; }
+
+/* Links */
+.prose a { text-decoration: underline; text-decoration-thickness: from-font; text-underline-offset: 2px; }
+
+/* Heading anchors show pilcrow on hover */
+.prose .heading-anchor::after { content: "\00B6"; opacity: 0; margin-left: 0.4rem; }
+.prose .heading-anchor:hover::after { opacity: .5; }
+
+/* Blockquotes */
+.prose blockquote { @apply border-l pl-4; border-color: rgba(255,255,255,0.12); color: var(--text-muted); }
+
+/* Inline code */
+.prose :not(pre) > code { position: relative; top: -1px; background: rgba(255,255,255,0.06); padding: 0.1rem 0.3rem; border-radius: 4px; letter-spacing: 0.02em; }
+
+/* Code blocks */
+.prose pre { background: #202225; border: 1px solid rgba(255,255,255,0.06); }
+.prose pre code { white-space: pre-wrap; word-break: break-word; }
+
+/* Figures */
+.prose figure { @apply my-8; }
+.prose figure img { @apply mx-auto; max-width: 100%; }
+.prose figcaption { color: var(--text-muted); font-size: .9em; text-align: center; margin-top: .5rem; }
+
+

@@ -1,0 +1,50 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('articles');
+  return posts.map((p) => ({ params: { slug: p.slug }, props: { entry: p } }));
+}
+
+// Provided by getStaticPaths
+const { entry } = Astro.props as { entry: any };
+const { Content, headings } = await entry.render();
+const data = entry.data;
+const heroPath = data.hero ? `/articles/${data.hero}` : undefined;
+---
+<Base title={`Ole Hylland Spjeldnæs — ${data.title}`}>
+<header class="mx-auto max-w-3xl px-4 pt-10 pb-6">
+  <h1 class="text-3xl md:text-5xl font-semibold leading-tight">{data.title}</h1>
+  {heroPath && (
+    <figure class="mt-6">
+      <img src={heroPath} alt={data.title} class="w-full max-h-[28rem] object-cover rounded-md border border-white/10" onerror="this.parentElement.remove()" />
+    </figure>
+  )}
+</header>
+  <article>
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mt-2">
+      <aside class="lg:col-span-2 order-2 lg:order-1 text-xs md:text-sm text-slate-400">
+        <div class="space-y-1">
+          <div><span class="font-semibold">Published</span> {new Date(data.published).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</div>
+          {data.location && <div><span class="font-semibold">Location</span> {data.location}</div>}
+        </div>
+        <p class="mt-4 italic">I'm on X/Twitter at <a href="https://x.com/spjoleh" rel="me noopener noreferrer">@spjoleh</a>.</p>
+      </aside>
+      <div class="prose dark:prose-invert article-prose lg:col-span-8 order-1 lg:order-2">
+        <Content />
+      </div>
+      <nav class="lg:col-span-2 order-3">
+        <ol class="text-xs md:text-sm space-y-1 sticky top-24">
+          {headings.filter((h) => h.depth === 2 || h.depth === 3).map((h) => (
+            <li style={`margin-left:${h.depth === 3 ? '1rem' : '0'}` }>
+              <a href={`#${h.slug}`}>{h.text}</a>
+            </li>
+          ))}
+        </ol>
+      </nav>
+    </div>
+  </article>
+</Base>
+
+

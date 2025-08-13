@@ -1,0 +1,23 @@
+---
+import Base from '../../layouts/Base.astro';
+---
+<Base title="Ole Hylland Spjeldnæs — Articles">
+  <header class="mb-8">
+    <h1 class="text-2xl font-semibold">Articles</h1>
+    <p class="text-slate-300">Longer‑form writing.</p>
+  </header>
+  <section class="space-y-6">
+    <ul class="space-y-3">
+      { (await Astro.glob('../../content/articles/*.md')).map((post) => (
+        <li>
+          <a class="font-medium" href={`/articles/${post.file.split('/').pop()?.replace('.md','')}`}>
+            {post.frontmatter.title}
+          </a>
+          <div class="text-sm text-slate-500">{new Date(post.frontmatter.published).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}{post.frontmatter.summary && ` — ${post.frontmatter.summary}`}</div>
+        </li>
+      )) }
+    </ul>
+  </section>
+</Base>
+
+

@@ -1,0 +1,48 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base title="Ole Hylland Spjeldnæs — Home">
+  <!-- Hero intro -->
+  <section class="mx-auto max-w-[70ch] text-center">
+    <h1 class="[text-wrap:balance] text-[clamp(32px,6vw,72px)] leading-tight font-serif text-slate-100">
+      I’m <a href="https://x.com/spjoleh" rel="me noopener noreferrer" class="font-normal italic tracking-[-0.005em] underline decoration-from-font underline-offset-2">Ole</a>, <span class="italic">founder and CEO</span> of delta.
+    </h1>
+    <div class="text-left mx-auto">
+      <p class="mt-6 text-[clamp(17px,1.6vw,20px)] text-slate-300">Previously, I did Bachelor’s and Master’s degrees in Mathematics at ETH Zurich. For most of my studies, I focused on pure algebra and algebraic geometry, but toward the end I got into zero-knowledge proofs. From there I became interested in distributed systems.</p>
+      <p class="mt-4 text-[clamp(17px,1.6vw,20px)] text-slate-300">delta is a permissionless network without the limitations of blockchains; said differently, it gives arbitrary systems properties like verifiable compute and (selectively) shared state.</p>
+      <p class="mt-4 text-[clamp(17px,1.6vw,20px)] text-slate-300">My writing is focused on all things delta and blockchains: the technology, features, and problems it solves.</p>
+    </div>
+  </section>
+
+  <div class="my-12 border-t border-pink-500/20"></div>
+
+  <!-- Articles only: a clean, wide list akin to the reference's left column -->
+  <section class="mx-auto max-w-[70ch]">
+    <h2 class="mt-6 text-xl font-semibold text-white">Articles</h2>
+    <ul class="mt-6 grid gap-8">
+      { (await Astro.glob('../content/articles/*.md'))
+          .sort((a,b) => (a.frontmatter.published < b.frontmatter.published ? 1 : -1))
+          .slice(0,8)
+          .map((post) => {
+            const slug = post.file.split('/').pop()?.replace('.md','');
+            const date = new Date(post.frontmatter.published).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+            return (
+              <li class="text-[15px]">
+                <div class="flex items-baseline gap-3">
+                  <a class="underline decoration-from-font underline-offset-2" href={`/articles/${slug}`}>{post.frontmatter.title}</a>
+                  <time class="tabular-nums text-slate-400">{date}</time>
+                </div>
+                { post.frontmatter.summary && (
+                  <div class="text-slate-400 mt-1">{post.frontmatter.summary}</div>
+                ) }
+              </li>
+            );
+          }) }
+    </ul>
+    <div class="mt-6">
+      <a class="text-slate-200 underline" href="/articles">View all articles →</a>
+    </div>
+  </section>
+</Base>
+
+

@@ -1,0 +1,8 @@
+@import "../styles/tailwind.css";
+
+html[data-theme="dark"],
+.dark {
+  color-scheme: dark;
+}
+
+

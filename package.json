@@ -1,0 +1,29 @@
+{
+  "name": "brandur-style-static",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "format": "prettier --write .",
+    "new:article": "node scripts/new-article.mjs"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^3.1.1",
+    "@astrojs/tailwind": "^5.1.0",
+    "astro": "^4.15.9",
+    "rehype-autolink-headings": "^7.1.0",
+    "rehype-slug": "^6.0.0",
+    "shiki": "^1.22.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.16",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.10",
+    "typescript": "^5.5.4"
+  }
+}
