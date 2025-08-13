@@ -17,3 +17,5 @@ Building a genuinely useful delta application will definitely require a ton of w
 At the time of writing, Stripe and Circle have just dropped new L1s, and people on X are arguing whether they should have instead built L2s, since you can build essentially equivalent systems at a much lower cost. The decision to make a Circle domain would not be based on the cost saving of the single operator, but on adding features like fraud-protection and AML; it would not make sense for Stripe to launch a domain just to save on DA fees, but potentially to enable smart contract-like automated flows beyond the blockchain, across its internal systems.
 
 Expect a lot more content showcasing exactly what types of new applications are made possible by delta.
+
+
