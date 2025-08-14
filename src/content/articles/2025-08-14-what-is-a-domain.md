@@ -29,7 +29,7 @@ Incorporating even a tiny regression model into a smart contract on a blockchain
 
 Additionally, the domain could add guard rails: We should expect people to try to attack the AI via prompt injection. The domain could use standard price feeds and execute a given trade only if the ratio falls within some margin of the actual prices.
 
-### What is delta?
+### What is delta[^1]
 
 delta is a permissionless network of domains with shared state:
 
@@ -38,4 +38,8 @@ delta is a permissionless network of domains with shared state:
 
 This highlights another important difference between blockchains and domains: Blockchains are *self-contained* state machines, whereas domains participate in shared state, with access to an existing pool of users, assets, and other domains.
 
-Domains are a new kind of verifiable systems. They remove the resource and capability constraints of blockchains while retaining verifiability. They also simplify distribution and interoperability. And they allow companies to ignore all blockchain-related quirks and build modern systems that are positively indistinguishable from Web2 while retaining the guarantees of Web3.
+### Conclusion
+
+Domains are a new kind of verifiable systems, with different properties than blockchains. They remove the resource and capability constraints of blockchains while retaining verifiability. They also simplify distribution and interoperability. And they allow companies to ignore all blockchain-related quirks and build modern systems that are positively indistinguishable from Web2 while retaining the guarantees of Web3.
+
+[^1]: Since most applications made possible by domains could not live on a blockchain or any other verifiable system, I expect other domain infrastructure than delta to pop up over time. For example, a permissioned version of delta would make sense for multi-opco companies looking to minimize audit costs and reconcile their internal ledgers.
