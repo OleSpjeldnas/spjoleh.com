@@ -86,9 +86,11 @@ body {
 .prose figcaption { color: var(--text-muted); font-size: .9em; text-align: center; margin-top: .5rem; }
 
 /* Footnotes: cleaner refs and no backlink arrow */
-.prose sup, sup { font-size: 0.65em; line-height: 0; vertical-align: super; }
+.prose sup, sup { font-size: 0.6em; line-height: 0; vertical-align: super; margin-left: 0.15em; }
 .prose sup a { text-decoration: none !important; color: var(--text-muted); }
 .prose a.footnote-backref, .prose [role="doc-backlink"] { display: none !important; }
 .prose [role="doc-noteref"] { text-decoration: none !important; color: var(--text-muted); }
+/* Do not show footnote refs inside headings */
+.prose h1 sup, .prose h2 sup, .prose h3 sup, .prose h4 sup { display: none; }
 
 
