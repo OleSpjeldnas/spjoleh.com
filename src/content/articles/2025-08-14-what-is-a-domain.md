@@ -40,4 +40,4 @@ delta is a permissionless network of domains with shared state:
 
 This highlights another important difference between blockchains and domains: Blockchains are *self-contained* state machines, whereas domains participate in shared state, with access to an existing pool of users, assets, and other domains. Whereas blockchains need bridges to connect to each other, domains are connected by default. 
 
-[^1]: Since most applications made possible by domains could not live on a blockchain or any other verifiable system, I expect other domain infrastructure than delta to pop up over time. For example, a permissioned version of delta would make sense for multi-opco companies looking to minimize audit costs and reconcile their internal ledgers.
+[^1]: Since most applications made possible by domains could not live on a blockchain or any other verifiable system, I expect other domain infrastructure than delta to pop up over time. For example, a permissioned version of delta would make sense for multi-opco groups looking to minimize audit costs and reconcile their internal ledgers.
