@@ -3,14 +3,13 @@ title: What is a domain
 published: 2025-08-14
 summary: "A domain is a verifiable system that is more powerful than a blockchain"
 ---
-A domain is an *open-world verifiable system*. We use *open-world* as an umbrella term which encompasses some of the core differentiating properties from other verifiable systems such as blockchains:
+A domain is a *capable verifiable system*. Blockchains are fundamentally incapable because of their extremely restraining execution models. Domains are not. While no modern application could live on a blockchain, domains pose none of the same limitations. Specifically, domains satisfy:
 
 - **Non-determinism:** Domains can read the file system, use human inputs, syscalls, true randomness etc.
 - **External I/O:** Domains can fetch any API, call HTTP, and use open sockets at the same rate as any modern system.
 - **Event-driven:** Domains can trigger verifiable state changes based on arbitrary events, such as sensor readings, an API output, or clock time; not just user transactions.
 - **Integrability:** Domains can integrate with any external system and use its private state.
 
-No modern Web2 application could exist on a blockchain without making enormous sacrifices, because blockchains fundamentally lack these properties. Domains therefore vastly expand the types of applications that can enjoy blockchain-like benefits such as a verifiable shared state.
 Domains live on the boundary between a shared state machine (in our case delta) and the outside world, and have access to computational resources from both:
 
 - They can use the regular internet, local storage, a GPU cluster, and so on;
@@ -23,7 +22,7 @@ A domain is a verifiable system just as a blockchain is, but it’s a different 
 - Blockchains are *process-verifiable*: The entire execution path is verifiable;
 - A domain is *outcome-verifiable*: For any outcome (state change) settled to delta, the domain must prove certain properties, but not the full execution. Beyond that, domains can be bound to prove that arbitrary constraints hold for their results.
 
-In particular, since execution itself is not verifiable on a domain, there is no need for resource metering via gas fees. A domain can run arbitrarily complex code without increasing the cost of verifiability.
+In particular, since execution itself is not verifiable on a domain, there is no need for resource metering via gas fees. A domain can run arbitrarily complex code without increasing the cost of verifiability. Domains are **resource-rich**.
 
 ### Example: An AI Domain
 
