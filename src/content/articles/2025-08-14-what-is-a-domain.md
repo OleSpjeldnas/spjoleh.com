@@ -5,12 +5,12 @@ summary: "A domain is a verifiable system that is more powerful than a blockchai
 ---
 A domain is an *open-world verifiable system*. We use *open-world* as an umbrella term which encompasses some of the core differentiating properties from other verifiable systems such as blockchains:
 
-- **Non-determinism:** Domains can read the file system, use human-in-the-loop, syscalls, true randomness etc.
+- **Non-determinism:** Domains can read the file system, use human inputs, syscalls, true randomness etc.
 - **External I/O:** Domains can fetch any API, call HTTP, and use open sockets at the same rate as any modern system.
 - **Event-driven:** Domains can trigger verifiable state changes based on arbitrary events, such as sensor readings, an API output, or clock time; not just user transactions.
 - **Integrability:** Domains can integrate with any external system and use its private state.
 
-Essentially no Web2 application could exist on a blockchain without making enormous sacrifices, precisely because blockchains fundamentally lack properties like these. Domains therefore vastly expand the types of applications that can enjoy blockchain-like benefits such as a verifiable shared state.
+No modern Web2 application could exist on a blockchain without making enormous sacrifices, because blockchains fundamentally lack these properties. Domains therefore vastly expand the types of applications that can enjoy blockchain-like benefits such as a verifiable shared state.
 Domains live on the boundary between a shared state machine (in our case delta) and the outside world, and have access to computational resources from both:
 
 - They can use the regular internet, local storage, a GPU cluster, and so on;
