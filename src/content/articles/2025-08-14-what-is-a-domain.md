@@ -1,18 +1,15 @@
 ---
 title: What is a domain
 published: 2025-08-14
-summary: A domain is an open‑world verifiable system—non‑deterministic, event‑driven, and integrable—that participates in shared state on delta.
+summary: A domain is an open‑world verifiable system: non‑deterministic, event‑driven, and integrable.
 ---
+A domain is an *open-world verifiable system*. We use *open-world* as an umbrella term which encompasses some of the core differentiating properties from other verifiable systems such as blockchains. Domains are:
 
-# What is a domain
-
-In simple terms, a domain is an *open-world verifiable system*. We use *open-world* as an umbrella term which encompasses the core differentiators from other verifiable systems such as blockchains:
-
-- **Non-determinism:** Domains can rely on file I/O, use any API, human-in-the-loop, syscalls, true randomness etc.
+- **Non-deterministic:** Domains can rely on file I/O, use any API, human-in-the-loop, syscalls, true randomness etc.
 - **Event-driven:** Domains can trigger verifiable state changes based on arbitrary events, such as sensor readings, an API output, or clock time; not just user transactions.
-- **Integrability:** Domains can integrate with any external system and use its private state.
+- **Integrable:** Domains can integrate with any external system and use its private state.
 
-Domains live on the boundary between delta and the outside world, and can selectively use resources from both:
+Domains live on the boundary between a shared state machine (in our case delta) and the outside world, and have access to computational resources from both:
 
 - They can use the regular internet, local storage, a GPU cluster, and so on;
 - They use delta’s bandwidth, proof verification, and deterministic settlement infrastructure.
@@ -28,7 +25,7 @@ In particular, since execution itself is not verifiable on a domain, there is no
 
 ### Example: An AI Domain
 
-Incorporating even a tiny regression model into a smart contract on a blockchain is prohibitively expensive. A domain, on the other hand, could run Llama 405B with no problem. Let’s say you wanted to use an AI as an asset exchange, where users send it requests of the form “I have 100 $AAPL and want $ETH”. This is an application which would very easily live as a domain, using the global assets that live on delta.
+Incorporating even a tiny regression model into a smart contract on a blockchain is prohibitively expensive. A domain could run Llama 405B with no problem. Let’s say you wanted to use an AI as an asset exchange, where users send it requests of the form “I have 100 $AAPL and want $ETH”. This is an application which could very easily live as a domain, in delta's case using the global assets that live on delta.
 
 Additionally, the domain could add guard rails: We should expect people to try to attack the AI via prompt injection. The domain could use standard price feeds and execute a given trade only if the ratio falls within some margin of the actual prices.
 
@@ -41,6 +38,4 @@ delta is a permissionless network of domains with shared state:
 
 This highlights another important difference between blockchains and domains: Blockchains are *self-contained* state machines, whereas domains participate in shared state, with access to an existing pool of users, assets, and other domains.
 
-Domains represent a new category of verifiable systems which I believe represent the next evolutionary step from blockchains. They remove the capability and resource constraints of blockchains while retaining verifiability. They also simplify distribution and interoperability. And they allow companies to ignore all blockchain-related quirks and build modern systems that are positively indistinguishable from Web2 while retaining the guarantees of Web3.
-
-
+Domains are a new kind of verifiable systems. They remove the resource and capability constraints of blockchains while retaining verifiability. They also simplify distribution and interoperability. And they allow companies to ignore all blockchain-related quirks and build modern systems that are positively indistinguishable from Web2 while retaining the guarantees of Web3.
