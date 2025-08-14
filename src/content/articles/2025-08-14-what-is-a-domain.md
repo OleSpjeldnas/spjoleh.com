@@ -1,7 +1,7 @@
 ---
 title: What is a domain
 published: 2025-08-14
-summary: A domain is an open‑world verifiable system: non‑deterministic, event‑driven, and integrable.
+summary: "A domain is an open‑world verifiable system: non‑deterministic, event‑driven, and integrable."
 ---
 A domain is an *open-world verifiable system*. We use *open-world* as an umbrella term which encompasses some of the core differentiating properties from other verifiable systems such as blockchains. Domains are:
 
