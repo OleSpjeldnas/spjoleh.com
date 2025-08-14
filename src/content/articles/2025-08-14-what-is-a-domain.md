@@ -3,12 +3,14 @@ title: What is a domain
 published: 2025-08-14
 summary: "A domain is an open‑world verifiable system: non‑deterministic, event‑driven, and integrable."
 ---
-A domain is an *open-world verifiable system*. We use *open-world* as an umbrella term which encompasses some of the core differentiating properties from other verifiable systems such as blockchains. Domains are:
+A domain is an *open-world verifiable system*. We use *open-world* as an umbrella term which encompasses some of the core differentiating properties from other verifiable systems such as blockchains:
 
-- **Non-deterministic:** Domains can rely on file I/O, use any API, human-in-the-loop, syscalls, true randomness etc.
+- **Non-determinism:** Domains can read the file system, use human-in-the-loop, syscalls, true randomness etc.
+- **External I/O:** Domains can fetch any API, call HTTP, and use open sockets at the same rate as any modern system.
 - **Event-driven:** Domains can trigger verifiable state changes based on arbitrary events, such as sensor readings, an API output, or clock time; not just user transactions.
-- **Integrable:** Domains can integrate with any external system and use its private state.
+- **Integrability:** Domains can integrate with any external system and use its private state.
 
+Essentially no Web2 application could exist on a blockchain without making enormous sacrifices, precisely because blockchains fundamentally lack properties like these. Domains therefore vastly expand the types of applications that can enjoy blockchain-like benefits such as a verifiable shared state.
 Domains live on the boundary between a shared state machine (in our case delta) and the outside world, and have access to computational resources from both:
 
 - They can use the regular internet, local storage, a GPU cluster, and so on;
@@ -36,10 +38,6 @@ delta is a permissionless network of domains with shared state:
 - **Permissionless:** Anyone can deploy a domain, issue an asset, or join as a user;
 - **Shared state:** The domains all share state. Assets are global, there is no bridging, and users can move easily between domains, as they could move between smart contracts on the same blockchain.
 
-This highlights another important difference between blockchains and domains: Blockchains are *self-contained* state machines, whereas domains participate in shared state, with access to an existing pool of users, assets, and other domains.
-
-### Conclusion
-
-Domains are a new kind of verifiable systems, with different properties than blockchains. They remove the resource and capability constraints of blockchains while retaining verifiability. They also simplify distribution and interoperability. And they allow companies to ignore all blockchain-related quirks and build modern systems that are positively indistinguishable from Web2 while retaining the guarantees of Web3.
+This highlights another important difference between blockchains and domains: Blockchains are *self-contained* state machines, whereas domains participate in shared state, with access to an existing pool of users, assets, and other domains. Whereas blockchains need bridges to connect to each other, domains are connected by default. 
 
 [^1]: Since most applications made possible by domains could not live on a blockchain or any other verifiable system, I expect other domain infrastructure than delta to pop up over time. For example, a permissioned version of delta would make sense for multi-opco companies looking to minimize audit costs and reconcile their internal ledgers.
