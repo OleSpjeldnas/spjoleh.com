@@ -13,7 +13,7 @@ const posts = await getCollection('articles');
     <ul class="space-y-3">
       { posts.map((post) => (
         <li>
-          <a class="font-medium" href={`/articles/${post.data.slug}`}>
+          <a class="font-medium" href={`/articles/${post.data.urlSlug}`}>
             {post.data.title}
           </a>
           <div class="text-sm text-slate-500">{new Date(post.data.published).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}{post.data.summary && ` — ${post.data.summary}`}</div>

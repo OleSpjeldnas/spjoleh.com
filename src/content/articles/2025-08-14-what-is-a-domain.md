@@ -1,6 +1,6 @@
 ---
 title: What is a domain
-slug: what-is-a-domain
+urlSlug: what-is-a-domain
 published: 2025-08-14
 summary: "A domain is a verifiable system that is more powerful than a blockchain"
 hero: Screenshot 2025-08-20 at 17.12.52.png
