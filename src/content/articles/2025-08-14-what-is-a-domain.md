@@ -3,7 +3,7 @@ title: What is a domain
 urlSlug: what-is-a-domain
 published: 2025-08-14
 summary: "A domain is a verifiable system that is more powerful than a blockchain"
-hero: Screenshot 2025-08-20 at 17.12.52.png
+hero: what-is-a-domain/Screenshot 2025-08-20 at 17.12.52.png
 ---
 A domain is a *capable verifiable system*. Blockchains are fundamentally incapable because of their extremely restraining execution models. Domains are not. While no modern application could live on a blockchain, domains pose none of the same limitations. Specifically, domains satisfy:
 
