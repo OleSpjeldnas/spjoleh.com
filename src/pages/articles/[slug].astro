@@ -18,7 +18,7 @@ const heroPath = data.hero ? `/articles/${data.hero}` : undefined;
   <h1 class="text-3xl md:text-5xl font-semibold leading-tight">{data.title}</h1>
   {heroPath && (
     <figure class="mt-6">
-      <img src={heroPath} alt={data.title} class="w-full max-h-[28rem] object-cover rounded-md border border-white/10" onerror="this.parentElement.remove()" />
+      <img src={heroPath} alt={data.title} class="w-full max-h-[28rem] object-cover rounded-md" onerror="this.parentElement.remove()" />
     </figure>
   )}
 </header>
