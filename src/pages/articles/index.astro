@@ -2,7 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import { getCollection } from 'astro:content';
 
-const posts = await getCollection('articles');
+const posts = (await getCollection('articles')).sort((a, b) => new Date(b.data.published).getTime() - new Date(a.data.published).getTime());
 ---
 <Base title="Ole Hylland Spjeldnæs — Articles">
   <header class="mb-8">

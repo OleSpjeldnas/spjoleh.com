@@ -1,7 +1,7 @@
 ---
 title: "Stop Optimizing Chains: Build Verifiable Systems That Go Further"
 urlSlug: stop-optimizing-chains
-published: 2025-01-16
+published: 2025-08-20
 summary: "Blockchains are one kind of verifiable system—but we've treated them like the only kind. That mistake explains why five years of infra progress hasn't produced five years of new apps."
 hero: banner.jpg
 ---
