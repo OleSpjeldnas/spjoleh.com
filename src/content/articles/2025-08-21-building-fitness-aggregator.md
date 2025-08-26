@@ -1,9 +1,11 @@
 ---
-title: "From World Computer to Guarantee Machine: Pt.I Building a fitness aggregator"
+title: "From World Computer to Guarantee Machine"
 urlSlug: building-fitness-aggregator
 published: 2025-08-26
 summary: "Part one of a three-part series illustrating why we need domains—taking the developer's point of view to show where blockchains fundamentally fall short."
 ---
+
+## Pt. I: Building a fitness aggregator
 
 *This is the first section of a three‑part series on why we need domains.* 
 
