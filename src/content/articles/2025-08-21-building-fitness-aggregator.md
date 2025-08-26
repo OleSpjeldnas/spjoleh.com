@@ -5,11 +5,11 @@ published: 2025-08-26
 summary: "Part one of a three-part series illustrating why we need domains—taking the developer's point of view to show where blockchains fundamentally fall short."
 ---
 
-*This is the first section of a three-part series, in which we illustrate why we need domains.* 
+*This is the first section of a three‑part series on why we need domains.* 
 
-- *Pt. I takes the point of view of a developer and shows where blockchains fundamentally fall short*
-- *Pt. II will present the conceptual shift that separates "the computer" from "the guarantee machine."*
-- *Pt. III ties it all together and shows what the app might look like as a domain*
+- *Pt. I: a developer’s view of where blockchains are the wrong tool.*
+- *Pt. II: the conceptual shift that separates "the computer" from "the guarantee machine."*
+- *Pt. III: what the app looks like as a domain.*
 
 You want to build a real-time fitness aggregator. Starting out with a simple Python script, you create a fresh virtual environment with your preferred cloud provider and start pulling wearable-sensor data out of thin air. Oura's API exposes yesterday's heart rate curve; Garmin Connect streams workout data while you run; Hevy's webhook fires the moment a friend hits a 1RM. One by one these feeds pour into an asyncio loop for event-driven data processing.
 
