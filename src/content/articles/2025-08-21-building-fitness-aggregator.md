@@ -1,5 +1,5 @@
 ---
-title: "Pt. I: Building a fitness aggregator"
+title: "From World Computer to Guarantee Machine: Pt.I Building a fitness aggregator"
 urlSlug: building-fitness-aggregator
 published: 2025-08-26
 summary: "Part one of a three-part series illustrating why we need domains—taking the developer's point of view to show where blockchains fundamentally fall short."
