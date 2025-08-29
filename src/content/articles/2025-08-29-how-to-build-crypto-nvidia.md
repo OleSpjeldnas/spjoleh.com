@@ -6,8 +6,6 @@ summary: "Programming GPUs used to be really hard until CUDA made it intuitive. 
 hero: how-to-build-crypto-nvidia/banner.png
 ---
 
-# How to build crypto Nvidia
-
 Programming GPUs used to be really hard. In order to write in the assembly-like shader languages exposed by the chips, the developer would have to think in the graphics-based terms of the hardware (triangles, pixels, framebuffers), instead of the standard high-level programming concepts they used in their day-to-day ("launch N threads over this array"). Effectively, they had to maintain two completely independent systems, the normal host code and a graphics‑shaped GPU codebase, each with its own tooling and concepts.
 
 ![Screenshot 2025-08-29 at 13.39.09.png](/articles/how-to-build-crypto-nvidia/Screenshot_2025-08-29_at_13.39.09.png)
