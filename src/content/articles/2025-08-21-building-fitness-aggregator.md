@@ -35,6 +35,8 @@ So you look at blockchains. They're good at **guarantees**: preventing unauthori
 
 Unfortunately, you immediately realize that transitioning your app to run on a blockchain is impossible. Your simple hobby app, which you have hacked together over the course of a few evenings, could never live as a smart contract on a blockchain. Here's why:
 
+<div class="table-wrapper">
+
 | Capability  | How the App Uses It | Why a Blockchain Can't Follow |
 | --- | --- | --- |
 | **Continuous external streams** | Wearables drip heart-rate packets every few seconds straight into an event loop. | Onchain code can't open sockets or subscribe to feeds; it waits for an oracle to deliver stale, batched data. |
@@ -49,6 +51,8 @@ Unfortunately, you immediately realize that transitioning your app to run on a b
 | **Private state** | A RAM ring-buffer stores 5 000 recent beat-to-beat intervals for sub-millisecond inference. | Ledger storage is slow, public, and every update is paid for in gas |
 | **File-system & cloud bursts** | Bulk-export a month of workouts to S3, back-fill analytics, delete the temp file—routine ops. | Smart contracts can't read or write files; they live inside a hermetic sandbox with no disk. |
 | **Clock & timezone freedom** | The code calls `datetime.now()` to align workouts with sunset or jetlag schedules. | Onchain time is the block timestamp, set by validators; not the real world. |
+
+</div>
 
 In fact, every time you try to make the app onchain, you end up pushing most of the work back offchain to oracles, keeper networks, and other offchain service providers.
 

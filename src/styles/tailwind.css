@@ -85,6 +85,58 @@ body {
 .prose figure img { @apply mx-auto; max-width: 100%; }
 .prose figcaption { color: var(--text-muted); font-size: .9em; text-align: center; margin-top: .5rem; }
 
+/* Tables - responsive mobile styling */
+.prose table {
+  @apply w-full border-collapse;
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+.prose th, .prose td {
+  @apply px-4 py-3 text-left border-b;
+  border-color: rgba(255,255,255,0.08);
+}
+
+.prose th {
+  @apply font-semibold bg-gray-800/50;
+}
+
+.prose td {
+  @apply align-top;
+}
+
+/* Mobile table responsiveness */
+@media (max-width: 768px) {
+  .prose .table-wrapper {
+    @apply -mx-4 px-4;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255,255,255,0.3) transparent;
+  }
+  
+  .prose .table-wrapper::-webkit-scrollbar {
+    height: 6px;
+  }
+  
+  .prose .table-wrapper::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .prose .table-wrapper::-webkit-scrollbar-thumb {
+    background-color: rgba(255,255,255,0.3);
+    border-radius: 3px;
+  }
+  
+  .prose .table-wrapper table {
+    min-width: 600px; /* Ensure table doesn't get too cramped */
+  }
+  
+  .prose .table-wrapper th,
+  .prose .table-wrapper td {
+    @apply px-3 py-2 text-sm;
+    white-space: nowrap;
+  }
+}
+
 /* Footnotes: cleaner refs and no backlink arrow */
 .prose sup, sup { font-size: 0.5em; line-height: 0; vertical-align: super; margin-left: 0.15em; }
 .prose sup a { text-decoration: none !important; color: var(--text-muted); }
