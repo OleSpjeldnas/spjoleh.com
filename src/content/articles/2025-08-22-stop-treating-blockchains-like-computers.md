@@ -5,7 +5,7 @@ published: 2025-09-03
 summary: "Part two of a three-part series exploring the conceptual shift that separates 'the computer' from 'the guarantee machine' and introduces the domain model."
 ---
 
-## Pt. II: Stop Treating Blockchains Like Computers
+## Stop Treating Blockchains Like Computers
 
 *This is the second section of a three‑part series on why we need domains.*
 
