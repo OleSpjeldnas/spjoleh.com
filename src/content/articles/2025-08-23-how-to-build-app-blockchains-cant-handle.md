@@ -13,7 +13,7 @@ summary: "Part three of a three-part series demonstrating how to build the fitne
 - *Pt. II: the conceptual shift that separates "the computer" from "the guarantee machine."*
 - *Pt. III: what the app looks like as a domain.*
 
-In Pt. I, you were a hobby dev shipping a verifiable fitness aggregator. You wanted friends and rivals to trust your claimed VO₂ max and related stats. You tried a blockchain and hit a wall—**not** edge cases, but basic developer needs:
+In Pt. I, you were a hobby dev shipping a verifiable fitness aggregator. You wanted friends and rivals to trust your claimed VO₂ max and related stats. You tried a blockchain and hit a wall—not edge cases, but basic developer needs:
 
 - **Continuous external streams**
 - **Event-driven updates**
@@ -29,11 +29,11 @@ In Pt. I, you were a hobby dev shipping a verifiable fitness aggregator. You wan
 
 In Pt. II we explained why: blockchains are **guarantee machines** that enforce constraints through replicated, deterministic execution. Programmability didn't remove the walls; it codified them. Chasing "better computers" on chain is the wrong axis. The value is what chains **prevent**, not what they **compute**.
 
-So stop impersonating a computer. Keep your app on ordinary infra and export only the **claims** others must trust—under explicit rules that can be verified.
+With delta, verifiability can be achieved without resorting to a bad computer. Keep your app on ordinary infra and export only the **claims** others must trust—under explicit rules that can be verified.
 
 ### Building a verifiable fitness aggregator app
 
-Instead of rebuilding your app inside a chain, you attach a **domain** to it—a thin adapter plus a set of **local laws**—and publish claims to a shared state network (**delta**) that enforces **global laws** (auth, ordering, anti‑replay, versioning).
+Instead of rebuilding your app inside a chain, you attach a [**domain**](https://spjoleh.com/articles/what-is-a-domain/) to it: a thin adapter plus a set of **local laws**. You publish claims to a shared state network (**delta**) that enforces **global laws**.
 
 **How it looks for the fitness app**
 
@@ -46,7 +46,7 @@ That's it. Your app keeps its streams, models, sockets, files, redeploys, and mo
 > Principle: Run the app where it thrives. Publish only what others must be able to verify.
 > 
 
-Note that a more complex system would likely share multiple types of data with different event triggers (e.g. based on user transactions), and write multiple local laws to provide various guarantees. In many cases, the adapter will also both read data from delta and write to it, whilst our fitness app only does the latter.
+Note that a more complex system would likely share multiple types of data with different event triggers (e.g. based on user transactions), and write a variety of local laws to provide various guarantees. In many cases, the adapter will also both read data from delta and write to it, whilst our fitness app only does the latter.
 
 ### What changes (and what doesn't)
 
