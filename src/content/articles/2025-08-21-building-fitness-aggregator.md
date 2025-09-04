@@ -7,7 +7,7 @@ summary: "Part one of a three-part series illustrating why we need domains—tak
 
 ## Building a fitness aggregator
 
-*This is the first section of a three‑part series on why we need domains.* 
+*This is the first section of a three‑part series on why we need [domains](https://spjoleh.com/articles/what-is-a-domain/).* 
 
 - *Pt. I: a developer’s view of where blockchains are the wrong tool.*
 - *Pt. II: the conceptual shift that separates "the computer" from "the guarantee machine."*
