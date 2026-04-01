@@ -1,7 +1,7 @@
 ---
 title: "From World Computer to Guarantee Machine: Part I"
 urlSlug: building-fitness-aggregator
-published: 2025-09-02
+published: 2025-07-29
 summary: "Part one of a three-part series illustrating why we need domains—taking the developer's point of view to show where blockchains fundamentally fall short."
 ---
 

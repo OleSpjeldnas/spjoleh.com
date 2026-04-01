@@ -1,7 +1,7 @@
 ---
 title: "From World Computer to Guarantee Machine: Part III"
 urlSlug: how-to-build-app-blockchains-cant-handle
-published: 2025-09-04
+published: 2025-10-22
 summary: "Part three of a three-part series demonstrating how to build the fitness aggregator as a domain—keeping the app where it thrives while making claims verifiable."
 ---
 
