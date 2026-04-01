@@ -1,7 +1,7 @@
 ---
 title: "How to build crypto Nvidia"
 urlSlug: how-to-build-crypto-nvidia
-published: 2025-08-29
+published: 2025-11-14
 summary: "Programming GPUs used to be really hard until CUDA made it intuitive. Blockchains face the same challenge today - and need their own CUDA moment."
 hero: how-to-build-crypto-nvidia/banner.png
 ---

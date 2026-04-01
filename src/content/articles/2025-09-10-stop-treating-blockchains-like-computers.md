@@ -1,7 +1,7 @@
 ---
 title: "From World Computer to Guarantee Machine: Part II"
 urlSlug: stop-treating-blockchains-like-computers
-published: 2025-09-03
+published: 2025-09-10
 summary: "Part two of a three-part series exploring the conceptual shift that separates 'the computer' from 'the guarantee machine' and introduces the domain model."
 ---
 
