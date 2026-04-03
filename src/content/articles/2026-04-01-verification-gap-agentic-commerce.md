@@ -5,6 +5,8 @@ published: 2026-04-01
 summary: "Merchant-side authorization solves the wrong half of agentic commerce. The missing piece is a buyer-side policy enforcement layer that verifies intent across merchants before funds move."
 ---
 
+![From point-of-sale to point-of-intent](/articles/verification-gap-agentic-commerce/hero.png)
+
 An agent books you a trip. Flight on United, hotel through Booking.com, car from Hertz. Your constraint: under $3,000 total, arriving before 3pm on the 14th so you make your dinner meeting. The agent finds options that work. Flight at $680, hotel at $1,450 for three nights, rental car at $340. Total: $2,470. Well within budget, timing checks out.
 
 Now what?
